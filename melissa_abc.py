@@ -1,6 +1,5 @@
-# This script performs ABC inventory classification: it ranks SKUs by their
-# annual usage value and assigns each one to Tier A, B, or C based on its
-# cumulative contribution to total inventory value.
+# This program sorts a list of products by how much value they contribute
+# overall, and groups them into A, B, or C categories based on that.
 
 skus = [
     {"sku": "BRK-100", "demand": 2000, "cost": 45},
@@ -58,7 +57,4 @@ if __name__ == "__main__":
         tier_counts[item["tier"]] += 1
     print(tier_counts)
 
-# --- Try It Yourself ---
-# TODO 1: Add two more SKUs of your own to the 'skus' list above. Re-run and
-#         see if the tier split changes much.
-# TODO 2: Try changing the assign_tier thresholds to 70 / 90 instead of 80 / 95.
+
